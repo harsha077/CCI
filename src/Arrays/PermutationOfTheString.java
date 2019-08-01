@@ -2,6 +2,9 @@ package Arrays;
 
 public class PermutationOfTheString {
 
+	/*
+	 * CCI  Arrays and Strings question 2
+	 */
 	public static void main(String[] args) {
 		System.out.println(getIfPermuted("tr\\s", "\\str"));
 	}

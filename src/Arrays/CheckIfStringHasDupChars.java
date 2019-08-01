@@ -7,7 +7,7 @@ import java.util.Collections;
 public class CheckIfStringHasDupChars {
 
 	/**
-	 * @param args
+	 * CCI  Arrays and Strings question 1
 	 */
 	public static void main(String[] args) {
 		//getDuplicateChars("stringg");
