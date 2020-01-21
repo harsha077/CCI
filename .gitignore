@@ -1,6 +1,0 @@
-/bin/*
-/src/test/*
-/bin/
-.classpath
-.settings
-.project
