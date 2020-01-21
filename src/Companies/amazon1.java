@@ -12,12 +12,12 @@ public class amazon1 {
 	public static void main(String ...args) {
 		amazon1 am = new amazon1();
 		List<Integer> al = new ArrayList<Integer>();
-		/*al.add(1);
+		al.add(1);
 		al.add(20);
 		al.add(25);
 		al.add(35);
 		al.add(60);
-		int truckSize = 90;*/
+		int truckSize = 90;
 		
 		/*al.add(20);
 		al.add(70);
@@ -27,12 +27,12 @@ public class amazon1 {
 		al.add(110);
 		int truckSize = 110;*/
 		
-		al.add(100);
+		/*al.add(100);
 		al.add(180);
 		al.add(40);
 		al.add(120);
 		al.add(10);
-		int truckSize = 250;
+		int truckSize = 250;*/
 		
 		System.out.println(am.getMatchingBoxes(al, truckSize));
 	}
@@ -41,11 +41,16 @@ public class amazon1 {
 		
 		List<Integer> resultList = new ArrayList<Integer>();
 		Map<Integer,Integer> mp1 = new HashMap<Integer, Integer>();
+		
+		//My initial thought was to create a additional map to hold all the results and 
 		int maxPack1 = 0;
 		int maxPack2 = 0;
 		int maxPackInd1 = 0;
 		int maxPackInd2 = 0;
 
+		/*If the requirement is to search through a list of elements frequently. Better convert that list to a hashmap as its search time complexity O(1).
+		 * That is why i have created a hashmap to search through the given list of elements.
+		 * */
 		Integer maxVal = truckSize - 30;
 		for(int i=0;i<packageSpaceSizeList.size();i++) {
 			int val = (int) packageSpaceSizeList.get(i);
@@ -64,11 +69,9 @@ public class amazon1 {
 					maxPackInd2 = (int)mp1.get(pck2);
 				}else {
 					if((pck1>maxPack1 && pck1>maxPack2) || (pck2>maxPack1 && pck2>maxPack2)) {
-						int pckInd1 = (int)item.getValue();
-						int pckInd2 = (int)mp1.get(pck2);
+						maxPackInd1 = (int)item.getValue();
+						maxPackInd2 = (int)mp1.get(pck2);
 						
-						maxPackInd1 = pckInd1;
-						maxPackInd2 = pckInd2;
 						maxPack1 = pck1;
 						maxPack2 = pck2;
 					}
