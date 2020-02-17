@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysAndStrings;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -39,7 +39,7 @@ public class CheckIfStringHasDupChars {
 		}
 	}
 	
-	public static char getAsciiValue(Character c){
+	public static char getAsciiValue(char c){
 		return (char)((int)c);
 	}
 	

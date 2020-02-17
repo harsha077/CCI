@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysAndStrings;
 
 public class ReplaceSpaceWith20Percent {
 

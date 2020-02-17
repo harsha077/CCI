@@ -1,8 +1,11 @@
 bin/*
 src/Test/*
+.settings
+.classpath
+.projects
 
 
 
 
 
-
+/bin/
