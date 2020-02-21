@@ -30,6 +30,12 @@ public class RouteBetweenNodes {
 		graph.clearVisitStatus();
 	}
 	
+	/**
+	 * 
+	 * 4.1 My Soution. 
+	 * Runtime: 2n + n*m = O(n * m)
+	 * It looks like CCI's solution is also n + (n * m) = O(n * m)
+	 */
 	public static boolean findRoute(String source, String destination,CreateNodeGraph<String> graph) {
 		boolean found = false;
 		Queue<Vertex> queue = new LinkedList<Vertex>();

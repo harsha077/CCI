@@ -8,8 +8,15 @@ public class CreateMinHeightBinSearchTree {
 						// 0,1,2,3,4,5,6,7,8,9,10
 		int[] sortedArr = {1,2,3,4,5,6,7,8,9,10,11};
 		//int[] sortedArr = {1,2,3};
+		
+		System.out.println(createMinHtBST(sortedArr));
+	}
+	
+	public static TreeNode createMinHtBST(int[] sortedArr) {
+		
 		root = createMinHtBST(sortedArr, root, 0, sortedArr.length-1,sortedArr.length-1);
-		System.out.println(root);
+		
+		return root;
 	}
 	
 	public static TreeNode createMinHtBST(int[] sortedArr, TreeNode node, int low, int high, int len) {
