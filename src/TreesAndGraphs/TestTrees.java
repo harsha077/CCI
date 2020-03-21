@@ -6,7 +6,7 @@ public class TestTrees {
 		//findNodeAndReturn();
 		//findNodeAndReturnItsParent();
 		//findMinNodeInCST();
-		removeNode();
+		//removeNode();
 		//inOrderTraversal();
 	}
 	

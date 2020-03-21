@@ -224,9 +224,39 @@ public class CreateBinarySearchTree {
 		}
 		return parentNode;
 	}
+	
+	public int findDepth(TreeNode node) {
+		return depthHelper(root,node,0);
+	}
+	
+	public int depthHelper(TreeNode root, TreeNode target, int depth) {
+		if(root == null || target == null) {
+			return depth;
+		}
+		
+		if(target.value == root.value) {
+			return depth;
+		}
+		
+		if(target.value < root.value) {
+			if(root.left!=null) {
+				depth = depthHelper(root.left,target,depth+1);
+			}else {
+				return 0;
+			}
+		}
+		if(target.value > root.value) {
+			if(root.right!=null) {
+				depth = depthHelper(root.right, target, depth+1);
+			}else {
+				return 0;
+			}
+		}
+		return depth;
+	}
 }
 
-class TreeNode{
+/*class TreeNode{
 	TreeNode left;
 	TreeNode right;
 	int value;
@@ -234,4 +264,4 @@ class TreeNode{
 	public TreeNode(int value) {
 		this.value = value;
 	}
-}
+}*/

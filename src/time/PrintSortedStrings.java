@@ -8,7 +8,7 @@ public class PrintSortedStrings {
 	public static void main(String[] args) {
 		PrintSortedStrings pss = new PrintSortedStrings();
 		
-		pss.printSortedStrngs(2);
+		pss.printSortedStrngs(4);
 	}
 	
 	void printSortedStrngs(int remaining) {
